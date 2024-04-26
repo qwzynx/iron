@@ -1,0 +1,453 @@
+<!-- this code is Parsa Rasouli Baghi's property and may not be shared or modified. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Iron - Fe</title>
+  <link rel="icon" type="image/png" href="files/IRON.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Megrim&family=Nabla&family=Nova+Mono&family=Orbitron:wght@900&family=Bungee+Shade&display=swap');
+html {
+    scroll-behavior: smooth; 
+}
+
+body {
+    background: rgb(187, 187, 187);
+    color: #000;
+    margin: 0;
+    padding: 0;
+    user-select: none;
+}
+
+.tit {
+    font-family: 'orbitron', Arial, sans-serif;
+    text-align: center;
+    margin-top: 15px;
+    font-size: 60px;
+}
+
+.tityou {
+    font-family: 'bungee shade', 'orbitron', Arial, sans-serif;
+    text-decoration: wavy;
+}
+
+.titLine {
+    height: 10px;
+    width: 80%;
+    border-width: 0px;
+    background-color: #000;
+}
+
+.contentLine {
+    height: 1px;
+    border-width: 0px;
+    background-color: #000;
+    width: 95%;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+.nav-box {
+    margin: 75px 0px;
+    padding: 16px 30px;
+    color: var(--color);
+    text-shadow: 0 0 15px var(--color);
+    text-decoration: none;
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    background: rgba(187, 187, 187, 0.9);
+    text-transform: uppercase;
+    font-size: 30px;
+    letter-spacing: 5px;
+    transition: 0.5s;
+    z-index: 1;
+    position: relative;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'orbitron', Arial, sans-serif;
+}
+
+.nav-box i {
+    font-size: 60px;
+}
+
+.nav-box:hover {
+    color: #fff;
+    border: 2px solid rgba(0, 0, 0, 0);
+    box-shadow: 0 0 0px var(--color);
+}
+
+.nav-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--color);
+    z-index: -1;
+    transform: scale(0);
+    transition: 0.5s;
+    transform-origin: center;
+}
+
+.nav-box:hover::before {
+    transform: scale(1);
+    transition-delay: 0.5s;
+    box-shadow: 0 0 10px var(--color),
+    0 0 30px var(--color),
+    0 0 60px var(--color);
+}
+
+.nav-box span {
+    position: absolute;
+    background: var(--color);
+    pointer-events: none;
+    border-radius: 2px;
+    box-shadow: 0 0 10px var(--color),
+    0 0 20px var(--color),
+    0 0 30px var(--color),
+    0 0 50px var(--color),
+    0 0 100px var(--color);
+    transition: 0.5s ease-in-out;
+    transition-delay: 0.25s;
+}
+
+.nav-box:hover span {
+    opacity: 0;
+    transition-delay: 0s;
+}
+
+.nav-box span:nth-child(1),
+.nav-box span:nth-child(3) {
+    width: 40px;
+    height: 4px;
+}
+
+.nav-box:hover span:nth-child(1),
+.nav-box:hover span:nth-child(3) {
+    transform: translateX(0);
+}
+
+.nav-box span:nth-child(2),
+.nav-box span:nth-child(4) {
+    width: 4px;
+    height: 40px;
+}
+
+.nav-box:hover span:nth-child(1),
+.nav-box:hover span:nth-child(3) {
+    transform: translateY(0);
+}
+
+.nav-box span:nth-child(1) {
+    top: calc(50% - 2px);
+    left: -50px;
+    transform-origin: left;
+}
+
+.nav-box:hover span:nth-child(1) {
+    left: 50%;
+}
+
+.nav-box span:nth-child(3) {
+    top: calc(50% - 2px);
+    right: -50px;
+    transform-origin: right;
+}
+
+.nav-box:hover span:nth-child(3) {
+    right: 50%;
+}
+
+.nav-box span:nth-child(2) {
+    left: calc(50% - 2px);
+    top: -50px;
+    transform-origin: top;
+}
+
+.nav-box:hover span:nth-child(2) {
+    top: 50%;
+}
+
+.nav-box span:nth-child(4) {
+    left: calc(50% - 2px);
+    bottom: -50px;
+    transform-origin: bottom;
+}
+
+.nav-box:hover span:nth-child(4) {
+    bottom: 50%;
+}
+
+.content {
+    font-family: 'nova mono', Arial, sans-serif;
+    font-size: 30px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.works {
+    margin-left: 25px;
+    margin-right: 25px;
+    font-family: Arial, 'Times New Roman', Times, serif;
+    font-size: 30px;
+}
+
+.conclusion {
+    animation: bulbAni 4s infinite linear;
+}
+
+.effect {
+    animation: effectAni 5s infinite linear;
+}
+
+.cause {
+    animation: causeAni 4.5s infinite ease-in-out;
+}
+
+.overview {
+    color: #f00;
+    animation: overviewAni 2s infinite ease-in-out;
+}
+
+.shift {
+    text-indent: 50px;
+}
+
+.image {
+    width: 65%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.square {
+    width: 30%;
+}
+
+.back-to-top-button {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #fff;
+    color: #222; 
+    border: none;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    font-size: 65px;
+    cursor: pointer;
+    z-index: 1000;
+    display: none;
+    line-height: 105px;
+    box-shadow: 0 0 40px 40px rgb(187, 187, 187);
+}
+
+.back-to-top-button i {
+    line-height: 50px;
+}
+
+@keyframes bulbAni {
+
+    0%,
+    40%,
+    100% {
+    color: #000;
+    }
+
+    60%,
+    80% {
+    color: #00f;
+    }
+}
+
+@keyframes effectAni {
+
+    0%,
+    35%,
+    100% {
+    color: #0f0;
+    }
+
+    50%,
+    85% {
+    color: #f00;
+    }
+}
+
+@keyframes causeAni {
+
+    0%,
+    35%,
+    100% {
+    font-size: 47px;
+    }
+
+    50%,
+    85% {
+    font-size: 35px;
+    }
+}
+
+@keyframes overviewAni {
+
+    0%,
+    100% {
+    transform: rotate(-30deg);
+    }
+
+    50% {
+    transform: rotate(30deg);
+    }
+}
+  </style>
+</head>
+<body>
+  <header>
+    <h1 class="tit">Why <strong class="tityou">YOU</strong> should becareful with Iron</h1>
+    <hr class="titLine">
+    <nav>
+      <div class="nav">
+        <a class="nav-box" href="#overview" style="--color:#f00;">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <i class="fas fa-info-circle"></i>
+          <br>
+          Overview
+        </a>
+        <a class="nav-box" href="#physical" style="--color:#000;">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <i class="fa-solid fa-plus-square"></i>
+          <br>
+          Health
+        </a>
+        <a class="nav-box" href="#mental" style="--color:#0f0;">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <i class="fas fa-exclamation"></i>
+          <br>
+        Prevention
+        </a>
+        <a class="nav-box" href="#conclusion" style="--color:#00f;">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <i class="fas fa-chart-bar"></i>
+          <br>
+          Conclusion
+        </a>
+      </div>
+    </nav>
+    <hr class="titLine">
+  </header>
+  <section id="overview" class="content">
+    <h2><i class="fas fa-info-circle overview"></i> Overview</h2>
+    <img src="files/78209533.cms" alt="An error occurred while loading image. contact Mahan." class="image square">
+    <p class="shift">Iron is an essential mineral for the body, but it can be harmful in large doses. The LD50 (lethal dose for 50% of the
+    population) of iron is approximately 30 grams per kilogram of body weight. This means that consuming a large amount of
+    iron can be dangerous and even fatal.</p>
+    <img src="files/DosageForm-Eng.png" alt="An error occurred while loading image. contact Mahan." class="image">
+    <p class="shift">It's important to be aware of the amount of iron you consume. The recommended daily allowance (RDA) for iron varies
+    depending on age and gender, but generally ranges from 8 to 18 milligrams per day. Consuming more than the RDA can lead
+    to iron toxicity, especially in children, who are more sensitive to iron overdose.</p>
+  </section>
+  <hr class="contentLine">
+  <section id="physical" class="content">
+    <h2><i class="fa-solid fa-plus-square cause"></i> Physical Effects</h2>
+    <img src="files/Amandas-web-photos-2-2021-06-24T171707.webp" alt="An error occurred while loading image. contact Mahan." class="image">
+    <p class="shift">Iron overdose can lead to serious health problems. Symptoms of iron toxicity include nausea, vomiting, abdominal pain,
+    and diarrhea. In severe cases, it can cause organ damage, coma, and even death. It's crucial to seek medical attention
+    immediately if you suspect iron poisoning.</p>
+    </section>
+  <hr class="contentLine">
+  <section id="mental" class="content">
+    <h2><i class="fas fa-exclamation effect"></i> Prevention</h2>
+    <img src="files/1687423918558.gif" alt="An error occurred while loading image. contact Mahan." class="image">
+    <p class="shift">To prevent iron overdose, store iron supplements and iron-containing products out of reach of children and in childproof
+    containers. Follow the recommended dosage guidelines for iron supplements and do not exceed the recommended daily
+    allowance. If you have young children, consider using iron-fortified products with caution and supervise their use. </p>
+    <img src="files/220px-Star_of_life2.svg.png" alt="An error occurred while loading image. contact Mahan." class="image square">
+    <p class="shift">In
+    case of accidental ingestion, contact poison control or seek medical help immediately. Regularly educate yourself and
+    others about the potential dangers of iron overdose.</p>
+  </section>
+  <hr class="contentLine">
+  <section id="conclusion" class="content">
+    <h2><i class="fas fa-chart-bar conclusion"></i> Conclusion</h2>
+    <p class="shift">In conclusion, while iron is an essential nutrient, it's important to consume it in the right amounts. Avoid taking iron
+    supplements unless advised by a healthcare professional, and keep iron-containing products out of reach of children. If
+    you or someone you know may have consumed too much iron, seek medical help immediately. Stay safe and be mindful of your
+    iron intake.</p>
+  </section>
+  <hr class="contentLine">
+  <h2 class="content"><i class="fa-solid fa-receipt"></i> Works Cited</h2>
+  <div class="works">
+    <span>&#x2022;BOYD, E. M., & SHANAS, M. N. (1963, July 27). The acute oral toxicity of reduced iron. Canadian Medical Association
+    journal. https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1921641/</span>
+    <br><br>
+    <span>&#x2022;Government of Canada, C. C. for O. H. and S. (2024, April 9). What is a LD₅₀ and LC₅₀?
+    https://www.ccohs.ca/oshanswers/chemicals/ld50.html</span>
+    <br><br>
+    <span>&#x2022;International Labour Organization. (2004, December 30). WHAT IS TOXICOLOGY. Toxicology - international occupational
+    safety & health information centre.
+    https://webapps.ilo.org/static/english/protection/safework/cis/products/safetytm/toxic.htm</span>
+    <br><br>
+    <span>&#x2022;Iron - Fe. Lenntech Water treatment & purification. (n.d.). https://www.lenntech.com/periodic/elements/fe.htm</span>
+    <br><br>
+    <span>&#x2022;Iron. Material Safety Data Sheet - Iron. (2007, June 11). https://fscimage.fishersci.com/msds/11490.htm</span>
+    <br><br>
+    <span>&#x2022;Iron. The Nutrition Source. (2023, March 7). https://www.hsph.harvard.edu/nutritionsource/iron/</span>
+    <br><br>
+    <span>&#x2022;Scientific Committees. (n.d.). LD50. Glossary: LD50.
+    https://ec.europa.eu/health/scientific_committees/opinions_layman/en/tooth-whiteners/glossary/jkl/ld50.htm</span>
+    <br><br>
+    <span>&#x2022;Yuen, H.-W. (2023, June 26). Iron toxicity. StatPearls [Internet]. https://www.ncbi.nlm.nih.gov/books/NBK459224/</span>
+    <br><br>
+    <span>&#x2022;https://chat.openai.com/</span>
+  </div>
+  <hr class="contentLine">
+  <div id="topButton" class="back-to-top-button">
+    <i class="fas fa-chevron-up"></i>
+  </div>
+  <footer>
+    <p class="works">&copy; 2024 Mahan Ghaffarianmayouni</p>
+  </footer>
+  <br><br><br><br><br>
+  <script>
+  window.addEventListener("scroll", function() {
+    var button = document.getElementById("topButton");
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    button.style.display = "block";
+    } else {
+    button.style.display = "none";
+    }
+    });
+    document.getElementById("topButton").addEventListener("click", function() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    });
+</script>
+</body>
+</html>
